@@ -43,7 +43,7 @@ cargo risczero install
 -  mempool.space -> https://mempool.dev.aws.archnetwork.xyz 
    -  Bitcoin mempool and blockchain explorer. This mempool.space instance monitors the regtest Bitcoin blockchain being used to run and validate all examples in this repo.
 
-
+63d3f989fbcc5663156ef22a880f2a6c1b281750b567ccbb49eebe3093d890d6
 
    cargo test -- --nocapture
    # arch-network
