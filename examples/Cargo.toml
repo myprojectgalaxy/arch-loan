@@ -1,0 +1,4 @@
+[workspace]
+members = [ 
+    "helloworld", "counter", "bank_account", "common", "rust_api_server",
+]
