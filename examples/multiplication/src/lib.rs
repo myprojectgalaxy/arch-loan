@@ -54,7 +54,7 @@ mod tests {
         let processed_tx = get_processed_transaction(NODE1_ADDRESS, txid)
             .expect("get processed transaction should not fail");
 
-       // println!("processed_tx {:?}", processed_tx);
+        println!("processed_tx {:?}", processed_tx);
 
         let state_txid = &processed_tx.bitcoin_txids[&instruction_hash];
         let utxo = read_utxo(NODE1_ADDRESS, format!("{}:0", state_txid.clone()))
@@ -86,7 +86,7 @@ mod tests {
         let processed_tx = get_processed_transaction(NODE1_ADDRESS, txid)
             .expect("get processed transaction should not fail");
 
-        //println!("processed_tx {:?}", processed_tx);
+        println!("processed_tx {:?}", processed_tx);
 
         let state_txid = &processed_tx.bitcoin_txids[&instruction_hash];
 
@@ -145,7 +145,7 @@ mod tests {
         let processed_tx = get_processed_transaction(NODE1_ADDRESS, txid)
             .expect("get processed transaction should not fail");
        
-       // println!("processed_tx {:?}", processed_tx);
+        println!("processed_tx {:?}", processed_tx);
 
         let state_txid = &processed_tx.bitcoin_txids[&instruction_hash];
 
