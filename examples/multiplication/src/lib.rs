@@ -117,8 +117,8 @@ mod tests {
             .expect("read utxo should not fail");
 
         let instruction_data = CounterParams {
-            name: "Amine".to_string(),
-            value: 16,
+            value1: 20,
+            value2: 50,
             tx_hex: hex::decode(prepare_fees()).unwrap(),
         };
         let instruction_data =
@@ -150,14 +150,14 @@ mod tests {
             .expect("read utxo should not fail");
         assert_eq!(
             utxo.data,
-            "Amine's counter updated to 17!".as_bytes().to_vec()
+            "Number 20 multiply with Number 50 and Result 1000".as_bytes().to_vec()
         );
 
         let utxo = read_utxo(NODE1_ADDRESS, format!("{}:1", state_txid.clone()))
             .expect("read utxo should not fail");
         assert_eq!(
             utxo.data,
-            "Amine's counter updated to 17!".as_bytes().to_vec()
+            "Number 20 multiply with Number 50 and Result 1000".as_bytes().to_vec()
         );
     }
 }

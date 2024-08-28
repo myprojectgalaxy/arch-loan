@@ -13,7 +13,7 @@ fn handler(_program_id: &Pubkey, utxos: &[UtxoInfo], instruction_data: &[u8]) ->
     let params: CounterParams = borsh::from_slice(instruction_data)?;
 
     for utxo in utxos {
-        *utxo.data.borrow_mut() = format!("{}'s multiply updated to {}!", params.value1, params.value1 * params.value2).as_str().as_bytes().to_vec();
+        *utxo.data.borrow_mut() = format!("Number {} multiply with Number {} and Result {}", params.value1, params.value2,params.value1 * params.value2).as_str().as_bytes().to_vec();
     }
 
     let mut tx: Transaction = consensus::deserialize(&params.tx_hex).unwrap();
